@@ -1,0 +1,16 @@
+services:
+  thingy:
+    build: .
+    ports:
+      - 2866:2866
+    environment:
+      SSL_ENABLED: 0
+      AUTH_TOKEN: "{{ cookiecutter.bearer_token }}"
+
+      REDIS_HOST: redis
+    depends_on:
+      - redis
+  redis:
+    image: redis/redis-stack-server
+    ports:
+      - 6379:6379
