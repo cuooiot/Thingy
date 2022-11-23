@@ -1,4 +1,4 @@
-from setuptools import setup
+from setuptools import setup, find_packages
 
 setup(
     name='{{ cookiecutter.project_slug }}',
@@ -10,11 +10,6 @@ setup(
     install_requires=[
         'cuoo.thingwork @ git+ssh://git@gitlab.com:bugbirdco/cuoo/thingwork.git@main'
     ],
-    packages=[
-        'app',
-        'app.controllers',
-        'app.devices',
-        'app.devices.dummy_device',
-    ],
-    package_dir={'app': '../'}
+    packages=find_packages(where="../", include=['app*']),
+    package_dir={'app': '../app'}
 )
