@@ -1,8 +1,6 @@
 FROM python:3-alpine
 
-mv /usr/src/app /usr/src/thingy
-
-WORKDIR /usr/src/thingy
+WORKDIR /usr/src
 
 COPY app app
 COPY bootstrap bootstrap

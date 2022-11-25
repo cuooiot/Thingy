@@ -8,7 +8,7 @@ setup(
     author_email='hey@cuoo.io',
     url='https://l.cuoo.io/thingy',
     install_requires=[
-        'cuoo.thingwork @ git+ssh://git@gitlab.com:bugbirdco/cuoo/thingwork.git@main'
+        'cuoo.thingwork @ git@github.com:cuooiot/Thingy.git@main'
     ],
     packages=find_packages(where="../", include=['app*']),
     package_dir={'app': '../app'}

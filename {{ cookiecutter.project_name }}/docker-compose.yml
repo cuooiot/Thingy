@@ -1,6 +1,7 @@
 services:
   thingy:
-    build: .
+    build:
+      context: .
     ports:
       - 2866:2866
     environment:
